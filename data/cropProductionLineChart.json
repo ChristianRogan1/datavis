@@ -1,0 +1,56 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv"},
+    "vconcat": [{
+      "width": 600,
+      "height": 300,
+      "mark": "line",
+      "params": [{
+        "name": "country",
+        "select": {"type": "point", "fields": ["Country"]},
+        "bind": "legend"
+      }],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "scale": {"domain": {"param": "brush"}},
+          "axis": {"title": "Year"}
+        },
+        "y": {
+          "field": "Crop_Yield_MT_per_HA",
+           "type": "quantitative",
+           "aggregate": "sum"
+           },
+        "color": {
+          "field": "Country",
+          "type": "nominal"  
+        },
+        "opacity": {
+          "condition": {"param": "country", "value": 1},
+          "value": 0.2
+        }
+      }
+    }, {
+      "width": 600,
+      "height": 60,
+      "mark": "area",
+      "params": [{
+        "name": "brush",
+        "select": {"type": "interval", "encodings": ["x"]}
+      }],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Crop_Yield_MT_per_HA",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false, "title": "Global Crop yeild (MT/HA)"},
+          "aggregate": "sum"
+        }
+      }
+    }]
+  }
+  
