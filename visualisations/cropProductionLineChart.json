@@ -29,7 +29,12 @@
         "opacity": {
           "condition": {"param": "country", "value": 1},
           "value": 0.2
-        }
+        },
+        "tooltip": [
+          {"field": "Year", "type": "temporal", "title": "Date"},
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Crop_Yield_MT_per_HA", "aggregate": "sum", "type": "quantitative", "title": "Crop production (MT/HA)"}
+        ]
       }
     }, {
       "width": 600,
