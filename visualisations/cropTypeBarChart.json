@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv"
+  },
+  "width": 600,
+  "height": 300,
+  "title": "Crop yield type by country",
+  "params": [
+    {
+      "name": "selected_Year",
+      "value": 2024,
+      "bind":{
+        "input": "range",
+        "min": 1990,
+        "max": 2024,
+        "step": 1,
+        "name": "Year"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.Year == selected_Year"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x":{
+      "field": "Country",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Crop_Yield_MT_per_HA",
+      "aggregate": "sum",
+      "title": "Crop Yield (MT/HA)"
+    },
+    "color":{
+      "field": "Crop_Type",
+      "type": "nominal",
+      "title": "Crop Type"
+    },
+    "tooltip":
+      [{"field": "Country", "type": "nominal", "title":"Country"},
+      {"field": "Crop_Type", "type": "nominal", "title": "Crop Type"},
+      {"field": "Crop_Yield_MT_per_HA", "aggregate":"sum", "type": "quantitative", "title": "Crop production (MT/HA)", "format": ".2f"},
+      {"field": "Year", "type": "ordinal"}
+      ]
+    
+  }
+}
