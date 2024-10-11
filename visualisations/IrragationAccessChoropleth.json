@@ -4,7 +4,20 @@
     "height": 450,
     "title": "Irrigation access and extreme weather events in Australia ",
     "projection": {"type": "mercator"},
-    "data": {"url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/ne_50m_admin_1_states_provinces.json", "format": {"type": "topojson", "feature": "ne_50m_admin_1_states_provinces"}},
+    "data": {
+          "url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv",
+          "format": {"type": "csv"}
+        },
+    "transform": [
+    {
+      "lookup": "Region",
+      "from": {
+        "data": {"url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/ne_50m_admin_1_states_provinces.json", "format": {"type": "topojson", "feature": "ne_50m_admin_1_states_provinces"}},
+        "key": "properties.name"},
+        "as": "geo"
+    },
+    {"filter": "datum.Year == selected_Year"}
+    ],
     "params": [
       {
         "name": "selected_Year",
@@ -18,28 +31,12 @@
         }
       }
     ],
-    "transform": [
-    {
-      "lookup": "properties.name",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv",
-          "format": {"type": "csv"}
-        },
-        "key": "Region",
-        "fields": ["Irrigation_Access"]}
-    }
-      ],
-    "layer": [{
-          "mark": {"type": "geoshape", "fill": "lightgrey", "stroke": "black", "strokeWidth": 0.5},
-          "encoding": {
-            "tooltip": [{"field": "properties.name", "title": "State:"},
-            {"field": "Irrigation_Access", "title": "Irrigation Access"}]
-          }
-          
-        },
-    {"mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
-    "encoding": {
+    "layer": [
+      {"mark": {"type": "geoshape", "fill": "black"}},
+
+      {"mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+      "encoding": {
+      "shape": {"field": "geo", "type": "geojson"},
       "color": {
         "field": "Irrigation_Access",
         "type": "quantitative",
@@ -48,14 +45,16 @@
           "domain": [0, 100], 
           "range": ["lightblue", "darkblue"]
           }
-        
       },
       "tooltip": [
-        {"field": "properties.name", "title": "State:"},
+        {"field": "Region", "title": "State:"},
         {"field": "Irrigation_Access", "title": "Irrigation access percentage:" }
-      ]}
-  }]
-  }
+        ]
+      }
+    }
+  ]
+}
+
   
   
   
