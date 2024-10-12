@@ -1,0 +1,71 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Economic impact and extreme eeather events vs Year",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv"  
+    },
+    "transform": [
+      {"filter": "datum.Country === 'Australia'"}
+    ],
+    
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "color": "darkred",
+          "strokeWidth": 2
+        },
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "type": "temporal",
+            "axis": {"title": "Year"}
+          },
+          "y": {
+            "field": "Extreme_Weather_Events",
+            "type": "quantitative",
+            "axis": {"title": "Extreme Weather Events"},
+            "aggregate": "sum"
+          }
+          
+        }
+        
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "darkgreen",
+          "strokeWidth": 2
+        },
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "type": "temporal"
+          },
+          "y": {
+            "field": "Economic_Impact_Million_USD",
+            "type": "quantitative",
+            "axis": {"title": "Economic Impact (Million USD)"},
+            "aggregate": "sum"
+          }
+        }
+      }
+      
+    
+    ],
+    "encoding": {
+      "tooltip": [
+        {"field": "Economic_Impact_Million_USD", "aggregate": "sum", "title": "Economic Impact", "type": "quantitative"},
+        {"field": "Year", "title": "year", "type": "temporal"},
+        {"field": "Extreme_Weather_Events", "aggregate": "sum", "type": "quantitative", "title": "Number of Extreme Weather Events"}
+      ]
+    },
+    "resolve": {
+      "scale": {
+        "y": "independent"
+      }
+    }
+  }
+  
