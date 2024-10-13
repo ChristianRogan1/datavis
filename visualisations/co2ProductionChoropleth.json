@@ -58,6 +58,7 @@
         "longitude": {"field": "Longitude", "type": "quantitative"},
       "latitude": {"field": "Latitude", "type": "quantitative"},
         "size": {
+          "title": "Average C02 production (MT)",
           "aggregate": "average",
           "field": "CO2_Emissions_MT",
           "type": "quantitative",

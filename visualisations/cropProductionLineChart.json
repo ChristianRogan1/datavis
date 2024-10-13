@@ -19,6 +19,7 @@
           "axis": {"title": "Year"}
         },
         "y": {
+          "title": "Sum of Crop Yield (MT/HA)",
           "field": "Crop_Yield_MT_per_HA",
            "type": "quantitative",
            "aggregate": "sum"

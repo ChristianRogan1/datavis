@@ -5,7 +5,7 @@
   },
   "width": 600,
   "height": 300,
-  "title": "Crop yield type by country",
+  "title": "Crop Yield Type by Country",
   "params": [
     {
       "name": "selected_Year",
