@@ -7,14 +7,15 @@
       "url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv"  
     },
     "transform": [
-      {"filter": "datum.Country === 'Australia'"}
+      {"filter": "datum.Country === 'Australia'"},
+      {"calculate": "datum.Economic_Impact_Million_USD * 0.00148",
+        "as": "Economic_Impact_Billion_AUD"}
     ],
     
     "layer": [
       {
         "mark": {
           "type": "line",
-          "color": "darkred",
           "strokeWidth": 2
         },
         "encoding": {
@@ -26,17 +27,16 @@
           "y": {
             "field": "Extreme_Weather_Events",
             "type": "quantitative",
-            "axis": {"title": "Extreme Weather Events"},
+            "axis": {"title": "Extreme Weather Events", "titleColor": "darkred"},
             "aggregate": "sum"
-          }
-          
+          },
+          "color": {"value": "darkred"}
         }
         
       },
       {
         "mark": {
           "type": "line",
-          "color": "darkgreen",
           "strokeWidth": 2
         },
         "encoding": {
@@ -45,11 +45,12 @@
             "type": "temporal"
           },
           "y": {
-            "field": "Economic_Impact_Million_USD",
+            "field": "Economic_Impact_Billion_AUD",
             "type": "quantitative",
-            "axis": {"title": "Economic Impact (Million USD)"},
+            "axis": {"title": "Economic Impact (Billion AUD)", "titleColor": "darkgreen"},
             "aggregate": "sum"
-          }
+          },
+          "color": {"value": "darkgreen"}
         }
       }
       
@@ -57,9 +58,11 @@
     ],
     "encoding": {
       "tooltip": [
-        {"field": "Economic_Impact_Million_USD", "aggregate": "sum", "title": "Economic Impact", "type": "quantitative"},
-        {"field": "Year", "title": "year", "type": "temporal"},
+        {"field": "Economic_Impact_Billion_AUD", "aggregate": "sum", "title": "Economic Impact", "type": "quantitative", "format": ".2f"},
+        {"field": "Year", "title": "year", "type": "temporal", "timeUnit": "year"},
         {"field": "Extreme_Weather_Events", "aggregate": "sum", "type": "quantitative", "title": "Number of Extreme Weather Events"}
+        
+        
       ]
     },
     "resolve": {
