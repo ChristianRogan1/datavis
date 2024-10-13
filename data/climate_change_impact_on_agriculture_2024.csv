@@ -1,4 +1,4 @@
-Year,Country,Region,Crop_Type,Average_Temperature_C,Total_Precipitation_mm,CO2_Emissions_MT,Crop_Yield_MT_per_HA,Extreme_Weather_Events,Irrigation_Access_%,Pesticide_Use_KG_per_HA,Fertilizer_Use_KG_per_HA,Soil_Health_Index,Adaptation_Strategies,Economic_Impact_Million_USD,Latitude,Longitude
+Year,Country,Region,Crop_Type,Average_Temperature_C,Total_Precipitation_mm,CO2_Emissions_MT,Crop_Yield_MT_per_HA,Extreme_Weather_Events,Irrigation_Access,Pesticide_Use_KG_per_HA,Fertilizer_Use_KG_per_HA,Soil_Health_Index,Adaptation_Strategies,Economic_Impact_Million_USD,Latitude,Longitude
 1990,Argentina,Pampas,Wheat,14.98,1175.6,25.88,4.383,8,57.06,20.34,60.94,65.92,No Adaptation,1177.04,-38.416097,-63.616672
 1990,Argentina,Northeast,Fruits,10.46,893.09,6.89,3.7,8,57.33,43.73,23.63,59.92,Drought-resistant Crops,1443.36,-38.416097,-63.616672
 1990,Argentina,Northeast,Corn,10.91,720.38,11.03,2.36,0,93.23,37.02,51.92,61.07,Crop Rotation,307.08,-38.416097,-63.616672
