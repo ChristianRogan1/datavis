@@ -9,52 +9,60 @@
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 <script src="vega_lite_vis.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
 <title>Global Agriculture </title>
 </head>
 <body>
 <h1>Global Agriculture</h1>
-<p>Agriculture is vital for sustaining human life and global economies. It provides nutrition and raw 
-    materials needed for everyday life and industrial processes. Beyond its economic significance, 
-    agriculture plays a critical role in rural developement and employment. Millions depend on agriculture 
-    for employment. Proper agricultural practices are crucial to maintain ecosystem health and and protect 
-    natural resources. As population continues to grow, and climate change is an increasing concern, the need 
-    for sustainable agricultural processes are at an all time high.
-</p>
-<div id="line_chart"></div>
-<p>
-C02 production from agriculture is a significant contributor to climate change, making it a key concern for enviromental 
-sustainability. Agriculture is estimated to be responsible for between one quarter and one thrid of the worlds
-greenhouse gas emissions, with carbon dioxide being a primary contributor. Agricultures emissions stem mainly from
-soil management processes, fossil fuel consumption in farming operations and the transportation required in the production
-and distribution of its products. Deforstation for for agricultural purposes releases C02 stored in trees and soil,
-increasing atmospheric C02 levels, and practices such as tilling the soil disrupt soil health, leading to the release 
-of more C02 into the atmosphere. As global food demands rise it is increasingly important that agricultural practices mitigate
-the amount of greenhouse gasses that are released into the atmosphere, to contribute to a more resilient agricultural system
+<div class="content-container">
+    <p class="side-by-side">Agriculture is vital for sustaining human life and global economies, providing essential nutrition and raw materials for everyday life and industrial processes. It is not only an economic powerhouse but also a cornerstone of rural development and employment. Millions of people worldwide depend on agriculture for their livelihoods, highlighting its significance in supporting communities and families.
+        Moreover, proper agricultural practices are crucial for maintaining ecosystem health and protecting natural resources. Sustainable agriculture practices promote soil health, enhance biodiversity, and ensure clean water supply, which are essential for both present and future generations. As the global population continues to grow, the pressure on agricultural systems intensifies, necessitating innovative solutions and practices.
+        Climate change poses additional challenges, threatening crop yields and food security. The urgency for sustainable agricultural processes has never been greater. By adopting practices that minimize environmental impact, enhance productivity, and improve resilience, we can create a more sustainable agricultural system. This will not only meet the increasing food demands but also ensure the well-being of rural communities and protect the planet's ecosystems. In summary, the importance of sustainable agriculture cannot be overstated, as it is integral to addressing the intertwined challenges of food security, environmental health, and economic stability.
+    </p>
+    <div class="image-container">
+        <img src="data/images/crops.jpg", width="45%", height="300, style="width: 100%; height: 100%; object-fit: cover;"">
+        <img src="data/images/corn.webp", width="45%", height="300, style="width: 100%; height: 100%; object-fit: cover;"">
+    </div>
+</div>
 
-</p>
-<div id="choropleth_map"></div>
-<p>
-    Agricultural crop types vary widely across different regions of the world due to climate, soil conditions, and cultural
-     preferences. In tropical areas, crops like rice and sugarcane dominate due to high temperatures and 
-     rainfall. Temperate regions are ideal for growing grains such as wheat, barley, and corn, as well as vegetables and 
-     fruits like apples and potatoes. In arid and semi-arid areas, drought-resistant crops like sorghum, millet, and certain 
-     legumes thrive. Coastal and river regions support rice paddies, while high-altitude regions often grow hardy crops like oats, 
-     quinoa, and root vegetables suited for cooler climates.
-</p>
-<div id="bar_chart"></div>
-<div id="irrigation_choropleth_map"></div>
-<p>
-    Extreme weather events in Australia such as droughts, floods, bushfires and heatwaves can have profound economic impacts on 
-    the agricultural sector. Climate change has heightened the frequency and severity of these events, leading to substantial financial
-    loss for for farmers and the agricultural industry as a whole. Droughts are particuraly detrimental, resulting in reduced crop yields
-    due to decreased irrigation access. Prolonged drought coniditions can lead to significant declines in crop production. Irrigation access
-    is crucial for sustaining agricultural productivity. There are many factors that can affect irrigation access such as extreme weather events and
-    competing demands from urban and industrial sectors. Improving irrigation efficciency and water management practices is essential for enhancing
-    agricultural resilience, maximising crop yields and ensuring sustainable water use in the face of climate change and population growth
+<div class="content-container">
+    <div id="line_chart" class="visualisation"></div>
+</div>
 
+<div class="content-container">
+    <p class="side-by-side">
+    C02 production from agriculture is a significant contributor to climate change, making it a key concern for enviromental sustainability. Agriculture is estimated to be responsible for between one quarter and one thrid of the worldsgreenhouse gas emissions, with carbon dioxide being a primary contributor. Agricultures emissions stem mainly fromsoil management processes, fossil fuel consumption in farming operations and the transportation required in the productionand distribution of its products. Deforstation for for agricultural purposes releases C02 stored in trees and soil,increasing atmospheric C02 levels, and practices such as tilling the soil disrupt soil health, leading to the release of more C02 into the atmosphere. As global food demands rise it is increasingly important that agricultural practices mitigatethe amount of greenhouse gasses that are released into the atmosphere, to contribute to a more resilient agricultural system
+    </p>
+    <div id="bar_chart"></div>
+</div>
+
+<div class="content-container">
+    <p id="center-text">
+        Extreme weather events in Australia such as droughts, floods, bushfires and heatwaves can have profound economic impacts on the agricultural sector. Climate change has heightened the frequency and severity of these events, leading to substantial financialloss for for farmers and the agricultural industry as a whole. Droughts are particuraly detrimental, resulting in reduced crop yieldsdue to decreased irrigation access. Prolonged drought coniditions can lead to significant declines in crop production. Irrigation accessis crucial for sustaining agricultural productivity. There are many factors that can affect irrigation access such as extreme weather events andcompeting demands from urban and industrial sectors. Improving irrigation efficciency and water management practices is essential for enhancingagricultural resilience, maximising crop yields and ensuring sustainable water use in the face of climate change and population growth
+    </p>
+</div>
+
+<div class="content-container">
+    <div id="irrigation_choropleth_map" class="side-by-side"></div>
+    <div id="Economic_line_chart" class="side-by-side"></div>
+</div>
+
+<div class="content-container">
+    <p class="side-by-side">
+        Agricultural crop types vary significantly across the globe, influenced by climate, soil conditions, and cultural practices. In tropical regions, the combination of high temperatures and ample rainfall makes it ideal for cultivating crops like rice and sugarcane, which thrive in such environments. These crops are crucial for local diets and economies. Temperate regions offer a different agricultural landscape, where grains such as wheat, barley, and corn are prevalent. These staples support both human consumption and livestock feed, making them vital for food security. Additionally, fruits and vegetables like apples and potatoes are commonly grown in these areas, contributing to diverse diets. In contrast, arid and semi-arid regions present unique challenges for agriculture. Here, drought-resistant crops like sorghum, millet, and certain legumes have adapted to survive with limited water resources. These crops are essential for sustaining livelihoods in harsher climates. Coastal and river regions provide favorable conditions for rice paddies, benefiting from their proximity to water. Meanwhile, high-altitude areas often see the cultivation of hardier crops such as oats, quinoa, and root vegetables, which are better suited for cooler temperatures. Understanding these regional differences is key to addressing global food security and agricultural sustainability.
+    </p>
+    <div class="image-container">
+        <img src="data/images/cropHarvesting.jpg", width="500", height="350, style="width: 100%; height: 100%; object-fit: cover;"">
+    </div>
     
-</p>
-<div id="Economic_line_chart"></div>
+</div>
+<div class="content-container">
+    <div id="choropleth_map" class="visualisation"></div>
+</div>
+
+
+
+
 
 </body>
 </html>

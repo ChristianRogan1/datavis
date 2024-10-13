@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Economic Impact and Number of Extreme Weather Events in Australia vs Year",
     "description": "Economic impact and extreme eeather events vs Year",
-    "width": 600,
-    "height": 400,
+    "width": 450,
+    "height": 450,
     "data": {
       "url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv"  
     },
