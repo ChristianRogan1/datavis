@@ -1,6 +1,6 @@
 var vg_1 = "visualisations/cropProductionLineChart.json";
 var vg_2 = "visualisations/co2ProductionChoropleth.json";
-var vg_3 = "Visualisations/cropTypeBarChart.json";
+var vg_3 = "visualisations/cropTypeBarChart.json";
 var vg_4 = "visualisations/IrragationAccessChoropleth.json";
 var vg_5 = "visualisations/economicImpactExtremeWeather.json"
 
