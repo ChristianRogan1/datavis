@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Economic Impact and Number of Extreme Weather Events in Australia vs Year",
     "description": "Economic impact and extreme eeather events vs Year",
     "width": 600,
     "height": 400,

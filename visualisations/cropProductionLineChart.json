@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Crop Yield vs Year by Country",
     "data": {"url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv"},
     "vconcat": [{
       "width": 600,
