@@ -3,7 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/ChristianRogan1/datavis/refs/heads/master/data/climate_change_impact_on_agriculture_2024.csv"
   },
-  "width": 700,
+  "width": 500,
   "height": 250,
   "title": "Crop Yield Type by Country",
   "params": [

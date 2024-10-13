@@ -14,9 +14,8 @@ h1 {
 }
 
 .side-by-side {
-    width: 45%;  /* Adjust as needed for layout */
-    margin-right: 20px;
-    gap: 20px;
+    width: 40%;  /* Adjust as needed for layout */
+    margin-right: 100px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
@@ -51,7 +50,7 @@ p {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#center-text {
+#center-text, #tractorImage {
     margin-right: 100px;
 }
 
@@ -61,7 +60,7 @@ body {
     background-color: #f9f9f9; 
 }
 
-#bar_chart, #center-text {
+#bar_chart, #center-text, #tractorImage {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
@@ -69,5 +68,6 @@ body {
 }
 
 #bar_chart {
-    margin-right: 20px;
+    margin-left: 100px;
 }
+
