@@ -9999,4 +9999,4 @@ Year,Country,Region,Crop_Type,Average_Temperature_C,Total_Precipitation_mm,CO2_E
 2024,United States of America,Northeast,Sugarcane,28.85,1736.93,10.56,3.08,4,14.57,15.54,67.41,96.2,Water Management,1334.75,37.09024,-95.712891
 2024,United States of America,South,Corn,8.89,2323.33,20.52,2.205,1,95.23,0.35,98.67,50.16,Drought-resistant Crops,310.93,37.09024,-95.712891
 2024,United States of America,Midwest,Coffee,20.71,1713.58,24.46,2.817,3,60.58,42.46,33.26,70.2,Organic Farming,1338.58,37.09024,-95.712891
-2024,Australia,South Australia,,,,,,,0,,,,,,,
+2024,Australia,South Australia,,,,,,,,,,,,,,
